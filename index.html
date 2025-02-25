@@ -33,7 +33,7 @@
         }
         .form-group {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Alinha o início dos elementos */
             gap: 10px;
             margin-bottom: 10px;
         }
@@ -64,6 +64,15 @@
         }
         button:hover {
             background-color: #45a049;
+        }
+        /* Estilo para os checkboxes */
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .checkbox-group label {
+            font-weight: normal;
         }
     </style>
 </head>
@@ -190,15 +199,24 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="realizadaPor">Realizada pelo Profissional:</label>
-                <select id="realizadaPor" name="realizadaPor">
-                    <option value="">- selecione -</option>
-                    <option value="MÉDICO">MÉDICO</option>
-                    <option value="ENFERMEIRO">ENFERMEIRO</option>
-                    <option value="DENTISTA">DENTISTA</option>
-                    <option value="TÉCNICO DE ENFERMAGEM">TÉCNICO DE ENFERMAGEM</option>
-                    <option value="AGENTE COMUNITÁRIO DE SAÚDE">AGENTE COMUNITÁRIO DE SAÚDE</option>
-                </select>
+                <label>Realizada pelo Profissional:</label>
+                <div class="checkbox-group">
+                    <label style="font-weight: normal;">
+                        <input type="checkbox" name="realizadaPor" value="MÉDICO"> MÉDICO
+                    </label>
+                    <label style="font-weight: normal;">
+                        <input type="checkbox" name="realizadaPor" value="ENFERMEIRO"> ENFERMEIRO
+                    </label>
+                    <label style="font-weight: normal;">
+                        <input type="checkbox" name="realizadaPor" value="DENTISTA"> DENTISTA
+                    </label>
+                    <label style="font-weight: normal;">
+                        <input type="checkbox" name="realizadaPor" value="TÉCNICO DE ENFERMAGEM"> TÉCNICO DE ENFERMAGEM
+                    </label>
+                    <label style="font-weight: normal;">
+                        <input type="checkbox" name="realizadaPor" value="AGENTE COMUNITÁRIO DE SAÚDE"> AGENTE COMUNITÁRIO DE SAÚDE
+                    </label>
+                </div>
             </div>
             <div class="form-group">
                 <label for="envioPlanilhas">Envio de Planilhas:</label>
@@ -243,6 +261,10 @@
 
         <script>
             function submitForm() {
+                // Coleta os valores dos checkboxes marcados
+                const realizadaPorCheckboxes = document.querySelectorAll('input[name="realizadaPor"]:checked');
+                const realizadaPorValues = Array.from(realizadaPorCheckboxes).map(checkbox => checkbox.value).join(', ');
+
                 const data = {
                     "Data de Atendimento": document.getElementById('dataAtendimento').value,
                     "Unidades Básicas de Saúde": document.getElementById('ubs').value,
@@ -260,7 +282,7 @@
                     "Agente Comunitário de Saúde - Total de Visitas Realizadas": document.getElementById('acsVisitas').value,
                     "Técnico de Enfermagem - Total de Procedimentos Realizados": document.getElementById('tecEnfermagemProcedimentos').value,
                     "Atividade Realizada": document.getElementById('atividadeRealizada').value,
-                    "Realizada pelo Profissional": document.getElementById('realizadaPor').value,
+                    "Realizada pelo Profissional": realizadaPorValues, // Valores concatenados dos checkboxes
                     "Envio de Planilhas": document.getElementById('envioPlanilhas').value,
                     "Notificações de Doenças e Agravos": document.getElementById('notificacoesDoencas').value,
                     "Envio das Frequências": document.getElementById('envioFrequencias').value,
