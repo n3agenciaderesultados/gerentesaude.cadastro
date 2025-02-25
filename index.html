@@ -12,14 +12,28 @@
         .container {
             margin-bottom: 20px;
         }
-        label {
-            display: block;
-            margin-top: 10px;
+        h2 {
+            margin-top: 20px;
         }
-        select, input[type="date"], input[type="number"] {
-            width: 100%;
+        .form-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        label {
+            min-width: 250px; /* Largura mínima para os labels */
+            text-align: right; /* Alinha o texto à direita */
+        }
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            flex-grow: 1; /* Faz o campo ocupar o espaço restante */
             padding: 8px;
-            margin-top: 5px;
+        }
+        textarea {
+            resize: vertical; /* Permite redimensionar verticalmente */
         }
         button {
             padding: 10px 20px;
@@ -39,134 +53,159 @@
     <!-- Primeiro Contêiner -->
     <div class="container">
         <h2>Identificação</h2>
-        <label for="dataAtendimento">Data de Atendimento:</label>
-        <input type="date" id="dataAtendimento" name="dataAtendimento">
-
-        <label for="ubs">Unidades Básicas de Saúde:</label>
-        <select id="ubs" name="ubs">
-            <option value="UBS POLO CANABRAVA ILHAS">UBS POLO CANABRAVA ILHAS</option>
-            <option value="UBS CETRO 1">UBS CETRO 1</option>
-            <option value="UBS CENTRO 2">UBS CENTRO 2</option>
-            <option value="UBS ALTO DO FUNDÃO">UBS ALTO DO FUNDÃO</option>
-            <option value="UBS ALTO DO CRUZEIRO">UBS ALTO DO CRUZEIRO</option>
-            <option value="UBS SÃO JOÃO">UBS SÃO JOÃO</option>
-            <option value="UBS SÃO FRANCISCO 1">UBS SÃO FRANCISCO 1</option>
-            <option value="UBS SÃO FRANCISCO 2">UBS SÃO FRANCISCO 2</option>
-            <option value="UBS CALUMBI">UBS CALUMBI</option>
-            <option value="UBS BOA VISTA DO LAGAMAR">UBS BOA VISTA DO LAGAMAR</option>
-            <option value="UBS IBOTIRAMINHA">UBS IBOTIRAMINHA</option>
-            <option value="CANABRAVA DO BOQUEIRÃO">CANABRAVA DO BOQUEIRÃO</option>
-            <option value="ILHA">ILHA</option>
-            <option value="BARRO ALTO">BARRO ALTO</option>
-        </select>
-
-        <label for="gerente">Gerente da Unidade:</label>
-        <select id="gerente" name="gerente">
-            <option value="TAYNAN ASSUNÇÃO">TAYNAN ASSUNÇÃO</option>
-            <option value="CAMILLA BELLO">CAMILLA BELLO</option>
-            <option value="TAMMY MIGUEZ">TAMMY MIGUEZ</option>
-            <option value="JAMILTON MIRANDA">JAMILTON MIRANDA</option>
-            <option value="DAMARES DIAS">DAMARES DIAS</option>
-            <option value="LUZINETE AMORIM">LUZINETE AMORIM</option>
-            <option value="ERIKA BARROS">ERIKA BARROS</option>
-            <option value="KARINA ROCHA">KARINA ROCHA</option>
-            <option value="IZOLDA MINEIRO">IZOLDA MINEIRO</option>
-            <option value="POLLYANA SOUZA">POLLYANA SOUZA</option>
-            <option value="JOSEANE ALVES">JOSEANE ALVES</option>
-            <option value="TAMIRES">TAMIRES</option>
-        </select>
-
-        <label for="classificacao">Classificação:</label>
-        <select id="classificacao" name="classificacao">
-            <option value="UNIDADES BÁSICAS DE SAÚDE">UNIDADES BÁSICAS DE SAÚDE</option>
-            <option value="UNIDADES SATÉLITES">UNIDADES SATÉLITES</option>
-        </select>
+        <div class="form-group">
+            <label for="dataAtendimento">Data de Atendimento:</label>
+            <input type="date" id="dataAtendimento" name="dataAtendimento">
+        </div>
+        <div class="form-group">
+            <label for="ubs">Unidades Básicas de Saúde:</label>
+            <select id="ubs" name="ubs">
+                <option value="UBS POLO CANABRAVA ILHAS">UBS POLO CANABRAVA ILHAS</option>
+                <option value="UBS CETRO 1">UBS CETRO 1</option>
+                <option value="UBS CENTRO 2">UBS CENTRO 2</option>
+                <option value="UBS ALTO DO FUNDÃO">UBS ALTO DO FUNDÃO</option>
+                <option value="UBS ALTO DO CRUZEIRO">UBS ALTO DO CRUZEIRO</option>
+                <option value="UBS SÃO JOÃO">UBS SÃO JOÃO</option>
+                <option value="UBS SÃO FRANCISCO 1">UBS SÃO FRANCISCO 1</option>
+                <option value="UBS SÃO FRANCISCO 2">UBS SÃO FRANCISCO 2</option>
+                <option value="UBS CALUMBI">UBS CALUMBI</option>
+                <option value="UBS BOA VISTA DO LAGAMAR">UBS BOA VISTA DO LAGAMAR</option>
+                <option value="UBS IBOTIRAMINHA">UBS IBOTIRAMINHA</option>
+                <option value="CANABRAVA DO BOQUEIRÃO">CANABRAVA DO BOQUEIRÃO</option>
+                <option value="ILHA">ILHA</option>
+                <option value="BARRO ALTO">BARRO ALTO</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="gerente">Gerente da Unidade:</label>
+            <select id="gerente" name="gerente">
+                <option value="TAYNAN ASSUNÇÃO">TAYNAN ASSUNÇÃO</option>
+                <option value="CAMILLA BELLO">CAMILLA BELLO</option>
+                <option value="TAMMY MIGUEZ">TAMMY MIGUEZ</option>
+                <option value="JAMILTON MIRANDA">JAMILTON MIRANDA</option>
+                <option value="DAMARES DIAS">DAMARES DIAS</option>
+                <option value="LUZINETE AMORIM">LUZINETE AMORIM</option>
+                <option value="ERIKA BARROS">ERIKA BARROS</option>
+                <option value="KARINA ROCHA">KARINA ROCHA</option>
+                <option value="IZOLDA MINEIRO">IZOLDA MINEIRO</option>
+                <option value="POLLYANA SOUZA">POLLYANA SOUZA</option>
+                <option value="JOSEANE ALVES">JOSEANE ALVES</option>
+                <option value="TAMIRES">TAMIRES</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="classificacao">Classificação:</label>
+            <select id="classificacao" name="classificacao">
+                <option value="UNIDADES BÁSICAS DE SAÚDE">UNIDADES BÁSICAS DE SAÚDE</option>
+                <option value="UNIDADES SATÉLITES">UNIDADES SATÉLITES</option>
+            </select>
+        </div>
     </div>
 
     <!-- Segundo Contêiner -->
     <div class="container">
         <h2>Total de Atendimentos</h2>
-        <label for="totalAgendado">Total de Atendimento Agendado:</label>
-        <input type="number" id="totalAgendado" name="totalAgendado">
-
-        <label for="agendadoMedico">Total de Atendimento Agendado Médico (Quantidade):</label>
-        <input type="number" id="agendadoMedico" name="agendadoMedico">
-
-        <label for="agendadoEnfermeiro">Total de Atendimento Agendado Enfermeiro (Quantidade):</label>
-        <input type="number" id="agendadoEnfermeiro" name="agendadoEnfermeiro">
-
-        <label for="agendadoDentista">Total de Atendimento Agendado Dentista (Quantidade):</label>
-        <input type="number" id="agendadoDentista" name="agendadoDentista">
-
-        <label for="totalRealizado">Total de Atendimento Realizado:</label>
-        <input type="number" id="totalRealizado" name="totalRealizado">
-
-        <label for="realizadoMedico">Total de Atendimento Realizado Médico (Quantidade):</label>
-        <input type="number" id="realizadoMedico" name="realizadoMedico">
-
-        <label for="realizadoEnfermeiro">Total de Atendimento Realizado Enfermeiro (Quantidade):</label>
-        <input type="number" id="realizadoEnfermeiro" name="realizadoEnfermeiro">
-
-        <label for="realizadoDentista">Total de Atendimento Realizado Dentista (Quantidade):</label>
-        <input type="number" id="realizadoDentista" name="realizadoDentista">
-
-        <label for="acsCadastro">Agente Comunitário de Saúde - Total de Cadastro da Área (Quantidade):</label>
-        <input type="number" id="acsCadastro" name="acsCadastro">
-
-        <label for="acsVisitas">Agente Comunitário de Saúde - Total de Visitas Realizadas (Quantidade):</label>
-        <input type="number" id="acsVisitas" name="acsVisitas">
-
-        <label for="tecEnfermagemProcedimentos">Técnico de Enfermagem - Total de Procedimentos Realizados (Quantidade):</label>
-        <input type="number" id="tecEnfermagemProcedimentos" name="tecEnfermagemProcedimentos">
+        <div class="form-group">
+            <label for="totalAgendado">Total de Atendimento Agendado:</label>
+            <input type="number" id="totalAgendado" name="totalAgendado">
+        </div>
+        <div class="form-group">
+            <label for="agendadoMedico">Total de Atendimento Agendado Médico:</label>
+            <input type="number" id="agendadoMedico" name="agendadoMedico">
+        </div>
+        <div class="form-group">
+            <label for="agendadoEnfermeiro">Total de Atendimento Agendado Enfermeiro:</label>
+            <input type="number" id="agendadoEnfermeiro" name="agendadoEnfermeiro">
+        </div>
+        <div class="form-group">
+            <label for="agendadoDentista">Total de Atendimento Agendado Dentista:</label>
+            <input type="number" id="agendadoDentista" name="agendadoDentista">
+        </div>
+        <div class="form-group">
+            <label for="totalRealizado">Total de Atendimento Realizado:</label>
+            <input type="number" id="totalRealizado" name="totalRealizado">
+        </div>
+        <div class="form-group">
+            <label for="realizadoMedico">Total de Atendimento Realizado Médico:</label>
+            <input type="number" id="realizadoMedico" name="realizadoMedico">
+        </div>
+        <div class="form-group">
+            <label for="realizadoEnfermeiro">Total de Atendimento Realizado Enfermeiro:</label>
+            <input type="number" id="realizadoEnfermeiro" name="realizadoEnfermeiro">
+        </div>
+        <div class="form-group">
+            <label for="realizadoDentista">Total de Atendimento Realizado Dentista:</label>
+            <input type="number" id="realizadoDentista" name="realizadoDentista">
+        </div>
+        <div class="form-group">
+            <label for="acsCadastro">Agente Comunitário de Saúde - Total de Cadastro da Área:</label>
+            <input type="number" id="acsCadastro" name="acsCadastro">
+        </div>
+        <div class="form-group">
+            <label for="acsVisitas">Agente Comunitário de Saúde - Total de Visitas Realizadas:</label>
+            <input type="number" id="acsVisitas" name="acsVisitas">
+        </div>
+        <div class="form-group">
+            <label for="tecEnfermagemProcedimentos">Técnico de Enfermagem - Total de Procedimentos Realizados:</label>
+            <input type="number" id="tecEnfermagemProcedimentos" name="tecEnfermagemProcedimentos">
+        </div>
     </div>
 
     <!-- Terceiro Contêiner -->
     <div class="container">
         <h2>Educação em Saúde Semanal</h2>
-        <label for="atividadeRealizada">Atividade Realizada:</label>
-        <select id="atividadeRealizada" name="atividadeRealizada">
-            <option value="HIPERDIA">HIPERDIA</option>
-            <option value="SAÚDE SEXUAL /REPRODUTIVA">SAÚDE SEXUAL /REPRODUTIVA</option>
-            <option value="SAÚDE MENTAL">SAÚDE MENTAL</option>
-            <option value="QUESTÕES VOLTADAS AO PRÉ NATAL">QUESTÕES VOLTADAS AO PRÉ NATAL</option>
-            <option value="OUTROS">OUTROS</option>
-        </select>
-
-        <label for="realizadaPor">Realizada pelo Profissional:</label>
-        <select id="realizadaPor" name="realizadaPor">
-            <option value="MÉDICO">MÉDICO</option>
-            <option value="ENFERMEIRO">ENFERMEIRO</option>
-            <option value="DENTISTA">DENTISTA</option>
-            <option value="TÉCNICO DE ENFERMAGEM">TÉCNICO DE ENFERMAGEM</option>
-            <option value="AGENTE COMUNITÁRIO DE SAÚDE">AGENTE COMUNITÁRIO DE SAÚDE</option>
-        </select>
-
-        <label for="envioPlanilhas">Envio de Planilhas:</label>
-        <select id="envioPlanilhas" name="envioPlanilhas">
-            <option value="SIM">SIM</option>
-            <option value="NÃO">NÃO</option>
-        </select>
-
-        <label for="notificacoesDoencas">Notificações de Doenças e Agravos:</label>
-        <select id="notificacoesDoencas" name="notificacoesDoencas">
-            <option value="ENVIADA">ENVIADA</option>
-            <option value="NÃO ENVIADA">NÃO ENVIADA</option>
-        </select>
-
-        <label for="envioFrequencias">Envio das Frequências:</label>
-        <select id="envioFrequencias" name="envioFrequencias">
-            <option value="ENVIADA">ENVIADA</option>
-            <option value="NÃO ENVIADA">NÃO ENVIADA</option>
-        </select>
-
-        <label for="demandaSemanal">Demanda Semanal:</label>
-        <select id="demandaSemanal" name="demandaSemanal">
-            <option value="Realizado">Realizado</option>
-            <option value="Não Realizado">Não Realizado</option>
-        </select>
-
-        <label for="observacaoDemanda">Observação Demanda Semanal:</label>
-        <textarea id="observacaoDemanda" name="observacaoDemanda"></textarea>
+        <div class="form-group">
+            <label for="atividadeRealizada">Atividade Realizada:</label>
+            <select id="atividadeRealizada" name="atividadeRealizada">
+                <option value="HIPERDIA">HIPERDIA</option>
+                <option value="SAÚDE SEXUAL /REPRODUTIVA">SAÚDE SEXUAL /REPRODUTIVA</option>
+                <option value="SAÚDE MENTAL">SAÚDE MENTAL</option>
+                <option value="QUESTÕES VOLTADAS AO PRÉ NATAL">QUESTÕES VOLTADAS AO PRÉ NATAL</option>
+                <option value="OUTROS">OUTROS</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="realizadaPor">Realizada pelo Profissional:</label>
+            <select id="realizadaPor" name="realizadaPor">
+                <option value="MÉDICO">MÉDICO</option>
+                <option value="ENFERMEIRO">ENFERMEIRO</option>
+                <option value="DENTISTA">DENTISTA</option>
+                <option value="TÉCNICO DE ENFERMAGEM">TÉCNICO DE ENFERMAGEM</option>
+                <option value="AGENTE COMUNITÁRIO DE SAÚDE">AGENTE COMUNITÁRIO DE SAÚDE</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="envioPlanilhas">Envio de Planilhas:</label>
+            <select id="envioPlanilhas" name="envioPlanilhas">
+                <option value="SIM">SIM</option>
+                <option value="NÃO">NÃO</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="notificacoesDoencas">Notificações de Doenças e Agravos:</label>
+            <select id="notificacoesDoencas" name="notificacoesDoencas">
+                <option value="ENVIADA">ENVIADA</option>
+                <option value="NÃO ENVIADA">NÃO ENVIADA</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="envioFrequencias">Envio das Frequências:</label>
+            <select id="envioFrequencias" name="envioFrequencias">
+                <option value="ENVIADA">ENVIADA</option>
+                <option value="NÃO ENVIADA">NÃO ENVIADA</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="demandaSemanal">Demanda Semanal:</label>
+            <select id="demandaSemanal" name="demandaSemanal">
+                <option value="Realizado">Realizado</option>
+                <option value="Não Realizado">Não Realizado</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="observacaoDemanda">Observação Demanda Semanal:</label>
+            <textarea id="observacaoDemanda" name="observacaoDemanda" rows="3"></textarea>
+        </div>
     </div>
 
     <button onclick="submitForm()">Enviar</button>
