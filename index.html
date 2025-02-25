@@ -85,11 +85,11 @@
             <h2>Identificação</h2>
             <div class="form-group">
                 <label for="dataAtendimento">Data de Atendimento:</label>
-                <input type="date" id="dataAtendimento" name="dataAtendimento">
+                <input type="date" id="dataAtendimento" name="dataAtendimento" required>
             </div>
             <div class="form-group">
                 <label for="ubs">Unidades Básicas de Saúde:</label>
-                <select id="ubs" name="ubs">
+                <select id="ubs" name="ubs" required>
                     <option value="">- selecione -</option>
                     <option value="UBS POLO CANABRAVA ILHAS">UBS POLO CANABRAVA ILHAS</option>
                     <option value="UBS CETRO 1">UBS CETRO 1</option>
@@ -109,7 +109,7 @@
             </div>
             <div class="form-group">
                 <label for="gerente">Gerente da Unidade:</label>
-                <select id="gerente" name="gerente">
+                <select id="gerente" name="gerente" required>
                     <option value="">- selecione -</option>
                     <option value="TAYNAN ASSUNÇÃO">TAYNAN ASSUNÇÃO</option>
                     <option value="CAMILLA BELLO">CAMILLA BELLO</option>
@@ -127,7 +127,7 @@
             </div>
             <div class="form-group">
                 <label for="classificacao">Classificação:</label>
-                <select id="classificacao" name="classificacao">
+                <select id="classificacao" name="classificacao" required>
                     <option value="">- selecione -</option>
                     <option value="UNIDADES BÁSICAS DE SAÚDE">UNIDADES BÁSICAS DE SAÚDE</option>
                     <option value="UNIDADES SATÉLITES">UNIDADES SATÉLITES</option>
@@ -140,47 +140,47 @@
             <h2>Total de Atendimentos</h2>
             <div class="form-group">
                 <label for="totalAgendado">Total de Atendimento Agendado:</label>
-                <input type="number" id="totalAgendado" name="totalAgendado">
+                <input type="number" id="totalAgendado" name="totalAgendado" required>
             </div>
             <div class="form-group">
                 <label for="agendadoMedico">Total de Atendimento Agendado Médico:</label>
-                <input type="number" id="agendadoMedico" name="agendadoMedico">
+                <input type="number" id="agendadoMedico" name="agendadoMedico" required>
             </div>
             <div class="form-group">
                 <label for="agendadoEnfermeiro">Total de Atendimento Agendado Enfermeiro:</label>
-                <input type="number" id="agendadoEnfermeiro" name="agendadoEnfermeiro">
+                <input type="number" id="agendadoEnfermeiro" name="agendadoEnfermeiro" required>
             </div>
             <div class="form-group">
                 <label for="agendadoDentista">Total de Atendimento Agendado Dentista:</label>
-                <input type="number" id="agendadoDentista" name="agendadoDentista">
+                <input type="number" id="agendadoDentista" name="agendadoDentista" required>
             </div>
             <div class="form-group">
                 <label for="totalRealizado">Total de Atendimento Realizado:</label>
-                <input type="number" id="totalRealizado" name="totalRealizado">
+                <input type="number" id="totalRealizado" name="totalRealizado" required>
             </div>
             <div class="form-group">
                 <label for="realizadoMedico">Total de Atendimento Realizado Médico:</label>
-                <input type="number" id="realizadoMedico" name="realizadoMedico">
+                <input type="number" id="realizadoMedico" name="realizadoMedico" required>
             </div>
             <div class="form-group">
                 <label for="realizadoEnfermeiro">Total de Atendimento Realizado Enfermeiro:</label>
-                <input type="number" id="realizadoEnfermeiro" name="realizadoEnfermeiro">
+                <input type="number" id="realizadoEnfermeiro" name="realizadoEnfermeiro" required>
             </div>
             <div class="form-group">
                 <label for="realizadoDentista">Total de Atendimento Realizado Dentista:</label>
-                <input type="number" id="realizadoDentista" name="realizadoDentista">
+                <input type="number" id="realizadoDentista" name="realizadoDentista" required>
             </div>
             <div class="form-group">
                 <label for="acsCadastro">Agente Comunitário de Saúde - Total de Cadastro da Área:</label>
-                <input type="number" id="acsCadastro" name="acsCadastro">
+                <input type="number" id="acsCadastro" name="acsCadastro" required>
             </div>
             <div class="form-group">
                 <label for="acsVisitas">Agente Comunitário de Saúde - Total de Visitas Realizadas:</label>
-                <input type="number" id="acsVisitas" name="acsVisitas">
+                <input type="number" id="acsVisitas" name="acsVisitas" required>
             </div>
             <div class="form-group">
                 <label for="tecEnfermagemProcedimentos">Técnico de Enfermagem - Total de Procedimentos Realizados:</label>
-                <input type="number" id="tecEnfermagemProcedimentos" name="tecEnfermagemProcedimentos">
+                <input type="number" id="tecEnfermagemProcedimentos" name="tecEnfermagemProcedimentos" required>
             </div>
         </div>
 
@@ -189,7 +189,7 @@
             <h2>Educação em Saúde Semanal</h2>
             <div class="form-group">
                 <label for="atividadeRealizada">Atividade Realizada:</label>
-                <select id="atividadeRealizada" name="atividadeRealizada">
+                <select id="atividadeRealizada" name="atividadeRealizada" required>
                     <option value="">- selecione -</option>
                     <option value="HIPERDIA">HIPERDIA</option>
                     <option value="SAÚDE SEXUAL /REPRODUTIVA">SAÚDE SEXUAL /REPRODUTIVA</option>
@@ -220,7 +220,7 @@
             </div>
             <div class="form-group">
                 <label for="envioPlanilhas">Envio de Planilhas:</label>
-                <select id="envioPlanilhas" name="envioPlanilhas">
+                <select id="envioPlanilhas" name="envioPlanilhas" required>
                     <option value="">- selecione -</option>
                     <option value="SIM">SIM</option>
                     <option value="NÃO">NÃO</option>
@@ -228,7 +228,7 @@
             </div>
             <div class="form-group">
                 <label for="notificacoesDoencas">Notificações de Doenças e Agravos:</label>
-                <select id="notificacoesDoencas" name="notificacoesDoencas">
+                <select id="notificacoesDoencas" name="notificacoesDoencas" required>
                     <option value="">- selecione -</option>
                     <option value="ENVIADA">ENVIADA</option>
                     <option value="NÃO ENVIADA">NÃO ENVIADA</option>
@@ -236,7 +236,7 @@
             </div>
             <div class="form-group">
                 <label for="envioFrequencias">Envio das Frequências:</label>
-                <select id="envioFrequencias" name="envioFrequencias">
+                <select id="envioFrequencias" name="envioFrequencias" required>
                     <option value="">- selecione -</option>
                     <option value="ENVIADA">ENVIADA</option>
                     <option value="NÃO ENVIADA">NÃO ENVIADA</option>
@@ -244,7 +244,7 @@
             </div>
             <div class="form-group">
                 <label for="demandaSemanal">Demanda Semanal:</label>
-                <select id="demandaSemanal" name="demandaSemanal">
+                <select id="demandaSemanal" name="demandaSemanal" required>
                     <option value="">- selecione -</option>
                     <option value="Realizado">Realizado</option>
                     <option value="Não Realizado">Não Realizado</option>
@@ -257,7 +257,7 @@
         </div>
 
         <!-- Botão de Envio -->
-        <button onclick="submitForm()">Enviar</button>
+        <button onclick="submitForm()">Salvar</button>
 
         <script>
             function submitForm() {
@@ -265,8 +265,13 @@
                 const realizadaPorCheckboxes = document.querySelectorAll('input[name="realizadaPor"]:checked');
                 const realizadaPorValues = Array.from(realizadaPorCheckboxes).map(checkbox => checkbox.value).join(', ');
 
+                // Formata a data para DD/MM/YYYY
+                const dataAtendimentoInput = document.getElementById('dataAtendimento');
+                const dataAtendimentoValue = new Date(dataAtendimentoInput.value);
+                const formattedDate = `${String(dataAtendimentoValue.getDate()).padStart(2, '0')}/${String(dataAtendimentoValue.getMonth() + 1).padStart(2, '0')}/${dataAtendimentoValue.getFullYear()}`;
+
                 const data = {
-                    "Data de Atendimento": document.getElementById('dataAtendimento').value,
+                    "Data de Atendimento": formattedDate,
                     "Unidades Básicas de Saúde": document.getElementById('ubs').value,
                     "Gerente da Unidade": document.getElementById('gerente').value,
                     "Classificação": document.getElementById('classificacao').value,
@@ -299,12 +304,42 @@
                 })
                 .then(response => response.json())
                 .then(result => {
-                    alert('Dados enviados com sucesso!');
+                    alert('CADASTRADO COM SUCESSO!');
+                    clearForm();
                 })
                 .catch(error => {
                     console.error('Erro ao enviar os dados:', error);
-                    alert('Ocorreu um erro ao enviar os dados.');
+                    alert('Ocorreu um erro ao salvar os dados.');
                 });
+            }
+
+            function clearForm() {
+                // Limpa todos os campos do formulário
+                document.getElementById('dataAtendimento').value = '';
+                document.getElementById('ubs').value = '';
+                document.getElementById('gerente').value = '';
+                document.getElementById('classificacao').value = '';
+                document.getElementById('totalAgendado').value = '';
+                document.getElementById('agendadoMedico').value = '';
+                document.getElementById('agendadoEnfermeiro').value = '';
+                document.getElementById('agendadoDentista').value = '';
+                document.getElementById('totalRealizado').value = '';
+                document.getElementById('realizadoMedico').value = '';
+                document.getElementById('realizadoEnfermeiro').value = '';
+                document.getElementById('realizadoDentista').value = '';
+                document.getElementById('acsCadastro').value = '';
+                document.getElementById('acsVisitas').value = '';
+                document.getElementById('tecEnfermagemProcedimentos').value = '';
+                document.getElementById('atividadeRealizada').value = '';
+                document.querySelectorAll('input[name="realizadaPor"]').forEach(checkbox => checkbox.checked = false);
+                document.getElementById('envioPlanilhas').value = '';
+                document.getElementById('notificacoesDoencas').value = '';
+                document.getElementById('envioFrequencias').value = '';
+                document.getElementById('demandaSemanal').value = '';
+                document.getElementById('observacaoDemanda').value = '';
+
+                // Ativa o campo "Data de Atendimento"
+                document.getElementById('dataAtendimento').focus();
             }
         </script>
     </div>
